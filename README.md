@@ -302,11 +302,3 @@ gemini-live-dictation --file "C:\path\to\recording.m4a" --vocabulary config\voca
 
 The file is decoded locally and streamed at its original speed. Only final text is saved;
 the audio file is never copied into this repository.
-
-## Next steps
-
-1. Try a short recording on a real Windows computer to confirm the microphone and
-   transcription work.
-2. Verify installation, keyboard switching, voice input, and Drive vocabulary reads and writes
-   on a physical Android phone.
-3. Tune the personal vocabulary and check that it syncs across devices.
