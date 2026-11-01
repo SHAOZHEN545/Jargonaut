@@ -71,7 +71,7 @@ not install the keyboard. The web app also runs directly in a browser without in
 anything.
 
 The Windows window, taskbar, installer, and desktop shortcut, the Android app, and the web
-home-screen icon all use the same Psyduck icon. After an update, restart the desktop app and
+home-screen icon all use the same rhino icon. After an update, restart the desktop app and
 run `Install Dictation.cmd` again to refresh the desktop shortcut; if a pinned taskbar icon
 still shows the old icon, unpin it and pin the new app again. Android needs the new APK. For
 the web app, publish the new version; if a home-screen shortcut keeps the old icon, delete it

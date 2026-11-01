@@ -11,7 +11,7 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent
 ASSETS = ROOT / "gemini_live_dictation" / "assets"
-BACKGROUND = "#fff8df"
+BACKGROUND = "#ffffff"
 
 
 def canvas(source: Image.Image, size: int, fraction: float, background=None) -> Image.Image:
@@ -39,7 +39,7 @@ def main() -> None:
         legacy = canvas(source, round(48 * scale), 0.78, BACKGROUND)
         legacy.save(folder / "ic_launcher.png")
         legacy.save(folder / "ic_launcher_round.png")
-        # Keep the entire duck within Android's central 66dp adaptive-icon safe area.
+        # Keep the entire rhino within Android's central 66dp adaptive-icon safe area.
         canvas(source, round(108 * scale), 66 / 108).save(folder / "ic_launcher_foreground.png")
 
 
