@@ -10,6 +10,28 @@ through a server of ours.
 The apps show English by default and Simplified Chinese when the system or browser language
 is Chinese.
 
+## Why I built this
+
+I talk faster than I type, and when an idea is still taking shape, saying it out loud is
+the quickest way to get all of it out of my head. These days I hand that kind of brain dump
+to an AI, which is very good at turning scattered thoughts into something organized. The
+weak link was getting the words in: voice-chat modes, and the dictation built into the
+ChatGPT and Claude apps, tend to stumble over rare concepts and technical terms, which make
+up a lot of what I say at work.
+
+What I wanted was plain dictation with a transcript accurate enough that I can glance at it,
+fix a word or two, and paste it into a chat. Dictation apps that combine AI transcription
+with a large personal vocabulary tend to be paid, but Google's Gemini transcription models,
+with a free personal API key, turned out to be more than enough. So I built my own, as a
+Windows app, a web app, and an Android keyboard, and I now use it all the time, in research
+and in everyday life.
+
+I don't know whether someone has already built the same thing. I also just enjoy making
+software I can bend to my own needs, and this was my first time shipping one app to desktop,
+web, and phone and publishing it on GitHub. AI coding assistants wrote most of the code;
+what they couldn't supply was the reason to build it, a clear idea of what I needed, and the
+decisions about how it should work.
+
 ## New computer: double-click install and start
 
 Works on 64-bit Intel / AMD PCs with Windows 10 / 11:
