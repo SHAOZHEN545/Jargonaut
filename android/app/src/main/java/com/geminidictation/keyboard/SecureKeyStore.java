@@ -14,6 +14,7 @@ import javax.crypto.SecretKey;
 import javax.crypto.spec.GCMParameterSpec;
 
 final class SecureKeyStore {
+    // The app's former name; a new alias would leave the saved API key undecryptable.
     private static final String ALIAS = "gemini-dictation-api-key";
     private static final String PREFS = "private-key";
 

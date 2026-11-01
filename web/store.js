@@ -1,5 +1,6 @@
 // Jobs live in this browser's IndexedDB: audio only until its transcript arrives, text until cleared.
 
+// The app's former name; a new one would lose the recordings and transcripts already saved.
 const DB_NAME = "gemini-dictation";
 const STORE = "jobs";
 

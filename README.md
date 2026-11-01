@@ -1,4 +1,4 @@
-# Gemini Live Dictation
+# Jargonaut
 
 Personal dictation with Gemini Live Transcription, in three forms: a Windows desktop app, a
 browser app, and an Android voice keyboard. You record first; when you finish, the whole
@@ -49,7 +49,7 @@ Works on 64-bit Intel / AMD PCs with Windows 10 / 11:
    "Choose vocabulary file" in the app and pick the `.txt` file Drive syncs to this computer.
    You can also start with a local vocabulary.
 
-After that, double-click **Gemini Dictation** on the desktop or **`Start Dictation.cmd`** in
+After that, double-click **Jargonaut** on the desktop or **`Start Dictation.cmd`** in
 the project. If the runtime is missing when you click "Start", the installer opens first.
 After updating the repository, double-click "Install" again to update dependencies; your key,
 vocabulary, recordings, and transcripts are kept.
@@ -223,7 +223,8 @@ Google's documentation: [web authorization](https://developers.google.com/identi
 
 The first deployment needs two settings on GitHub: make the repository public (Pages requires
 this on free accounts), and under Settings → Pages → Build and deployment, set Source to
-**GitHub Actions**. The address is `https://<username>.github.io/gemini-dictation/`.
+**GitHub Actions**. The address is `https://<username>.github.io/Jargonaut/` (the path is
+case-sensitive).
 
 Local preview: in the project root run
 `.\.venv\Scripts\python.exe -m http.server 8765 --bind 127.0.0.1`, then open

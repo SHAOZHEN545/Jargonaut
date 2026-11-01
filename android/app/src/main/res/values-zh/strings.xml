@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Gemini 语音输入</string>
+    <string name="app_name">Jargonaut</string>
     <string name="cancel">取消</string>
     <string name="seconds">%1$.1f 秒</string>
 
@@ -130,9 +130,9 @@
     <string name="settings_reload">从 Drive 重新读取</string>
     <string name="settings_save_changes">保存修改到 Drive</string>
     <string name="settings_ime_header">输入法设置</string>
-    <string name="settings_enable_ime">启用 Gemini 语音输入</string>
+    <string name="settings_enable_ime">启用 Jargonaut</string>
     <string name="settings_pick_ime">选择当前输入法</string>
-    <string name="settings_usage">在其他 App 的输入框里切换到 Gemini 语音输入。点击麦克风开始录音，再点一次结束；转写完成后文字会写入当前输入框。</string>
+    <string name="settings_usage">在其他 App 的输入框里切换到 Jargonaut。点击麦克风开始录音，再点一次结束；转写完成后文字会写入当前输入框。</string>
     <string name="settings_wait_busy">请等词库读取或保存完成</string>
     <string name="settings_switch_discards">切换词库文件会放弃尚未保存的词条修改。</string>
     <string name="settings_continue">继续</string>

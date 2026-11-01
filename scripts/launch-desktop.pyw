@@ -40,4 +40,4 @@ except Exception:
         if zh
         else "The app could not start. Double-click Install Dictation.cmd to repair the installation."
     )
-    ctypes.windll.user32.MessageBoxW(None, message + "\n\n" + detail, "Gemini Dictation", 0x10)
+    ctypes.windll.user32.MessageBoxW(None, message + "\n\n" + detail, "Jargonaut", 0x10)

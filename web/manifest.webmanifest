@@ -1,6 +1,6 @@
 {
-  "name": "Gemini Dictation",
-  "short_name": "Dictation",
+  "name": "Jargonaut",
+  "short_name": "Jargonaut",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

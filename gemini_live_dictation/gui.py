@@ -658,6 +658,7 @@ class VocabularyDialog(QDialog):
 class DictationWindow(QWidget):
     def __init__(self) -> None:
         super().__init__()
+        # QSettings keeps the app's former name; a new one would forget the chosen vocabulary file.
         saved_path = QSettings("Gemini Dictation", "Gemini Dictation").value("vocabulary_path", "")
         self.vocabulary_path = Path(saved_path) if saved_path else VOCABULARY_PATH
         self.recorder: LocalRecorder | None = None
@@ -669,7 +670,7 @@ class DictationWindow(QWidget):
         self.elapsed_seconds = 0
         self.close_when_finished = False
         self.key_verified = False
-        self.setWindowTitle("Gemini Dictation")
+        self.setWindowTitle("Jargonaut")
         self.setWindowIcon(QIcon(str(APP_ICON_PATH)))
         self.setMinimumSize(880, 980)
         self.resize(1000, 1020)
@@ -736,7 +737,7 @@ class DictationWindow(QWidget):
         eyebrow = QLabel("PERSONAL TRANSCRIPTION STUDIO")
         eyebrow.setObjectName("eyebrow")
         root.addWidget(eyebrow)
-        title = QLabel("Gemini Dictation")
+        title = QLabel("Jargonaut")
         title.setObjectName("title")
         root.addWidget(title)
         intro = QLabel(tr(

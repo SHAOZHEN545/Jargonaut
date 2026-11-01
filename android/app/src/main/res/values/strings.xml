@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Gemini Voice Input</string>
+    <string name="app_name">Jargonaut</string>
     <string name="cancel">Cancel</string>
     <string name="seconds">%1$.1f s</string>
 
@@ -130,9 +130,9 @@
     <string name="settings_reload">Reload from Drive</string>
     <string name="settings_save_changes">Save changes to Drive</string>
     <string name="settings_ime_header">Keyboard setup</string>
-    <string name="settings_enable_ime">Enable Gemini Voice Input</string>
+    <string name="settings_enable_ime">Enable Jargonaut</string>
     <string name="settings_pick_ime">Choose current keyboard</string>
-    <string name="settings_usage">In any app\'s text field, switch to Gemini Voice Input. Tap the mic to start recording and tap again to stop; when transcription finishes, the text is typed into the current field.</string>
+    <string name="settings_usage">In any app\'s text field, switch to Jargonaut. Tap the mic to start recording and tap again to stop; when transcription finishes, the text is typed into the current field.</string>
     <string name="settings_wait_busy">Wait until the vocabulary finishes loading or saving</string>
     <string name="settings_switch_discards">Switching vocabulary files discards unsaved term changes.</string>
     <string name="settings_continue">Continue</string>

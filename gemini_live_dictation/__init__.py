@@ -1,1 +1,1 @@
-"""Gemini Live Dictation package."""
+"""Jargonaut package."""

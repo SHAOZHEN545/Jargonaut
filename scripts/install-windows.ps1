@@ -150,7 +150,7 @@ function Download-InstallerFile([string]$Url, [string]$Destination) {
     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
     $client = New-Object Net.WebClient
     try {
-        $client.Headers.Add('User-Agent', 'Gemini-Dictation-Installer')
+        $client.Headers.Add('User-Agent', 'Jargonaut-Installer')
         $task = $client.DownloadFileTaskAsync([Uri]$Url, $Destination)
         $deadline = [DateTime]::UtcNow.AddMinutes(5)
         while (-not $task.IsCompleted) {
@@ -171,14 +171,14 @@ try {
         $installLock = [IO.File]::Open((Join-Path $runtimeRoot 'install.lock'), 'OpenOrCreate', 'ReadWrite', 'None')
     }
     catch { throw (Localize 'Another installer window is running. Wait for it to finish, then try again.' '另一个安装窗口正在运行。请等待它完成后再试。') }
-    [IO.File]::WriteAllText($logPath, "Gemini Dictation installation`r`n", [Text.Encoding]::UTF8)
+    [IO.File]::WriteAllText($logPath, "Jargonaut installation`r`n", [Text.Encoding]::UTF8)
 
     if (-not $Headless) {
         Add-Type -AssemblyName System.Windows.Forms
         Add-Type -AssemblyName System.Drawing
         [Windows.Forms.Application]::EnableVisualStyles()
         $form = New-Object Windows.Forms.Form
-        $form.Text = Localize 'Install Gemini Dictation' '安装 Gemini Dictation'
+        $form.Text = Localize 'Install Jargonaut' '安装 Jargonaut'
         $form.Icon = New-Object Drawing.Icon($appIconPath)
         $form.ClientSize = New-Object Drawing.Size(560, 215)
         $form.StartPosition = 'CenterScreen'
@@ -263,9 +263,15 @@ try {
     }
     if (-not $NoShortcuts) {
         $desktop = [Environment]::GetFolderPath('DesktopDirectory')
-        Save-Shortcut -Path (Join-Path $desktop 'Gemini Dictation.lnk') -Target $pythonwExe `
+        Save-Shortcut -Path (Join-Path $desktop 'Jargonaut.lnk') -Target $pythonwExe `
             -Arguments (Quote-NativeArgument (Join-Path $projectRoot 'scripts\launch-desktop.pyw')) `
             -WorkingDirectory $projectRoot -Description (Localize 'Gemini voice transcription' 'Gemini 语音转写') -IconPath $appIconPath
+        # Installs from before the rename left a shortcut under the old name; replace it instead of keeping both.
+        $oldShortcut = Join-Path $desktop 'Gemini Dictation.lnk'
+        if (Test-Path -LiteralPath $oldShortcut) {
+            try { Remove-Item -LiteralPath $oldShortcut -Force }
+            catch { Write-InstallLog $_.Exception.Message }
+        }
     }
     Update-Progress (Localize 'Installation complete. When the app opens, save your Gemini API key and choose a vocabulary file.' '安装完成。首次打开后，请保存 API Key 并选择词库文件。')
     if (-not $NoLaunch) {
@@ -273,8 +279,8 @@ try {
     }
     if (-not $Headless) {
         $form.Hide()
-        $done = Localize 'Installation complete. From now on, double-click Gemini Dictation on the desktop to open it. Keep this project folder.' '安装完成。以后双击桌面上的 Gemini Dictation 即可打开。请保留当前项目文件夹。'
-        [void][Windows.Forms.MessageBox]::Show($done, 'Gemini Dictation', 'OK', 'Information')
+        $done = Localize 'Installation complete. From now on, double-click Jargonaut on the desktop to open it. Keep this project folder.' '安装完成。以后双击桌面上的 Jargonaut 即可打开。请保留当前项目文件夹。'
+        [void][Windows.Forms.MessageBox]::Show($done, 'Jargonaut', 'OK', 'Information')
     }
     exit 0
 }
@@ -289,7 +295,7 @@ catch {
         Add-Type -AssemblyName System.Windows.Forms
         if ($null -ne $form) { $form.Hide() }
         $hint = Localize 'No commands needed: fix the problem, then double-click Install Dictation.cmd again.' '无需输入命令，修复后重新双击 Install Dictation.cmd 即可。'
-        $title = Localize 'Gemini Dictation installation incomplete' 'Gemini Dictation 安装未完成'
+        $title = Localize 'Jargonaut installation incomplete' 'Jargonaut 安装未完成'
         [void][Windows.Forms.MessageBox]::Show($message + "`r`n`r`n" + $hint + "`r`n" + $logLabel + $logPath, $title, 'OK', 'Error')
     }
     exit 1

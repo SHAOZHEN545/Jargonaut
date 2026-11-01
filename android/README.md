@@ -35,7 +35,7 @@ For local development, install Android SDK 35, JDK 17, and Gradle 8.9, then run
 Android Studio. The project uses Android Gradle Plugin 8.7.0. The APK is in
 `app/build/outputs/apk/debug/`.
 
-After installing, open "Gemini Voice Input":
+After installing, open "Jargonaut":
 
 1. Allow the microphone, paste your own Gemini API key (e.g. from Bitwarden), and save it. The
    key is encrypted with the Android Keystore and stays on the phone; it is never uploaded to
@@ -54,7 +54,7 @@ After installing, open "Gemini Voice Input":
    changes to Drive" (adding a term also saves earlier changes). Comment lines starting with
    `#` in the file are kept. If another device changed the file, saving asks you to reload it
    first instead of overwriting. The keyboard reads the file again after every recording.
-4. Tap "Enable Gemini Voice Input", then "Choose current keyboard". Tap the microphone in any
+4. Tap "Enable Jargonaut", then "Choose current keyboard". Tap the microphone in any
    normal text field to use it.
 
 The tabs at the top of the keyboard switch between "Voice", "Edit", and "Clipboard":
